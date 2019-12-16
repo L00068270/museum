@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="LinqHqSqlDatabaseClasses">
+  <DataContextMoniker Name="/LinqHqSqlDatabaseClassesDataContext" />
+  <nestedChildShapes>
+    <classShape Id="29025f19-c652-46a7-b71b-c995ccc8e6dc" absoluteBounds="0.875, 0.75, 2, 3.5016097005208326">
+      <DataClassMoniker Name="/LinqHqSqlDatabaseClassesDataContext/LibraryMember" />
+      <nestedChildShapes>
+        <elementListCompartment Id="497c4507-045e-4d3d-b003-6a7a993e4145" absoluteBounds="0.89000000000000012, 1.21, 1.9700000000000002, 2.941609700520833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="e51bbf31-419a-489f-8511-3395f4cb1771" absoluteBounds="3.25, 0.75, 2, 6.1938297526041657">
+      <DataClassMoniker Name="/LinqHqSqlDatabaseClassesDataContext/BookofHonour" />
+      <nestedChildShapes>
+        <elementListCompartment Id="caa149b9-6d67-4647-a70f-5a85d4fe9018" absoluteBounds="3.2649999999999997, 1.21, 1.9700000000000002, 5.6338297526041661" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

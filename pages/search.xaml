@@ -1,0 +1,84 @@
+﻿<Page x:Class="museum.pages.search"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+      xmlns:viewmodels="clr-namespace:museum.viewmodels"  
+      xmlns:views="clr-namespace:museum.views"       
+      mc:Ignorable="d" FontFamily="Arial" FontSize="12"      
+      Title="search" Width="1200" MinWidth="300" Background="white">
+
+    <Page.Resources>
+        <!--  Global Button Defined  -->
+        <Style TargetType="Button">
+            <Setter Property="Margin" Value="1" />
+            <Setter Property="FontFamily" Value="Arial" />
+            <Setter Property="FontSize" Value="14" />
+            <Setter Property="Background" Value="white" />
+            <Setter Property="Foreground" Value="#325D79" />
+            <Setter Property="Width" Value="100" />
+            <Setter Property="Height" Value="22" />
+            <Setter Property="VerticalContentAlignment" Value="Center" />
+            <Setter Property="BorderBrush" Value="white" />
+        </Style>
+        <Style TargetType="ScrollBar">
+            <Setter Property="Stylus.IsPressAndHoldEnabled" Value="False" />
+            <Setter Property="Stylus.IsFlicksEnabled" Value="false" />
+            <Setter Property="Width" Value="5" />
+            <Setter Property="MaxWidth" Value="{Binding Width, RelativeSource={RelativeSource Self}}" />
+        </Style>
+
+
+        <!--DATA TEMPLATES - THIS TELL CONTENT CONTROL WHAT VIEW TO ACCESS BASED ON DATA CONTEXT IT IS BOUND TO-->
+        <DataTemplate x:Name="template_records" DataType="{x:Type viewmodels:viewmodel_recordspublicportal}">
+            <views:view_records DataContext="{Binding Path=viewmodel_recordspublicportal}"/>
+        </DataTemplate>
+    </Page.Resources>
+
+    <ScrollViewer CanContentScroll="True" ScrollViewer.VerticalScrollBarVisibility="Auto">
+        <Grid MaxWidth="1200" Margin="0,6,0,6">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="0"/>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="0"/>
+                <ColumnDefinition Width="auto"/>
+                <ColumnDefinition Width="40"/>
+                <ColumnDefinition Width="auto"/>
+                <ColumnDefinition Width="auto"/>
+            </Grid.ColumnDefinitions>
+
+
+            <!--ROW 1 CONTENT NAVAGATION HYPERLINKS-->
+            <Border Grid.Row="1" Grid.ColumnSpan="4" Padding="20,0,20,0" Margin="0,0,0.333,0">
+                <Border.InputBindings>
+                    <!--CLICK TO OPEN MESSAGE-->
+                    <MouseBinding MouseAction="LeftClick" Command="{Binding OpenMessageCommand}">
+
+                    </MouseBinding>
+                </Border.InputBindings>
+            </Border>
+
+            <!--ROW 2 CONTENT NAVAGATION-->
+            <Border Grid.Row="3" Grid.ColumnSpan="4" Padding="20,0,20,0" Margin="0,0,0.333,0">
+                <StackPanel>
+                    <DockPanel x:Name="docMainPanel">
+                        <Frame x:Name="frameMainFrame">
+
+                        </Frame>
+                    </DockPanel>
+                </StackPanel>
+            </Border>
+
+            <!--GRID VIEWS FOR MODEL PAGES-->
+            <ContentControl Grid.Row="4" Grid.ColumnSpan="4" Content="{Binding}" Margin="0,0,0.333,80" Grid.RowSpan="2">
+
+            </ContentControl>
+        </Grid>
+    </ScrollViewer>
+</Page>

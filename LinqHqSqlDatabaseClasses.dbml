@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="BookofHonour" Class="LinqHqSqlDatabaseClassesDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=HQ-SQLDB\HQSQL2008;Initial Catalog=BookofHonour;Integrated Security=True" SettingsObjectName="museum.Properties.Settings" SettingsPropertyName="BookofHonourConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.LibraryMember" Member="LibraryMembers">
+    <Type Name="LibraryMember">
+      <Column Name="MemberID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="NameFirst" Type="System.String" DbType="VarChar(30) NOT NULL" CanBeNull="false" />
+      <Column Name="NameInitial" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="NameLast" Type="System.String" DbType="VarChar(30) NOT NULL" CanBeNull="false" />
+      <Column Name="Username" Type="System.String" DbType="VarChar(30) NOT NULL" CanBeNull="false" />
+      <Column Name="Password" Type="System.String" DbType="VarChar(30) NOT NULL" CanBeNull="false" />
+      <Column Name="ConfirmPassword" Type="System.String" DbType="VarChar(30) NOT NULL" CanBeNull="false" />
+      <Column Name="Address" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="Street" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="Town" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="County" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="Country" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="Postcode" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="Classification" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.BookofHonour" Member="BookofHonours">
+    <Type Name="BookofHonour">
+      <Column Name="[Ref No]" Member="Ref_No" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Surname" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="[First Name]" Member="First_Name" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Rank" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="[Service / Regiment No#]" Member="Service___Regiment_No_" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="[Regiment / Unit / Service]" Member="Regiment___Unit___Service" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="[Attestation Date / Place]" Member="Attestation_Date___Place" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="[Residence When Enlisted]" Member="Residence_When_Enlisted" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="[Date of Birth]" Member="Date_of_Birth" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="[Place of Birth]" Member="Place_of_Birth" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="[Fathers Name]" Member="Fathers_Name" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="[Mothers Name]" Member="Mothers_Name" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="[Parental / Next of Kin Address]" Member="Parental___Next_of_Kin_Address" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="[Next of Kin]" Member="Next_of_Kin" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Religion" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="[Marital Status]" Member="Marital_Status" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="[Spouse Name]" Member="Spouse_Name" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="[Spouse Address]" Member="Spouse_Address" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="[Cause of Death]" Member="Cause_of_Death" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="[Place of Death]" Member="Place_of_Death" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="[Date of Death]" Member="Date_of_Death" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="[Place of Burial]" Member="Place_of_Burial" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="[Age at Death]" Member="Age_at_Death" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Memorial" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Will" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="[Award / Honours / Medals]" Member="Award___Honours___Medals" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="[Image(s)]" Member="Image_s_" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="[Any additional info]" Member="Any_additional_info" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+    </Type>
+  </Table>
+</Database>

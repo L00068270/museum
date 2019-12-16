@@ -1,0 +1,178 @@
+﻿<UserControl x:Class="museum.views.view_recordspublicportal"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:museum="clr-namespace:museum"
+             xmlns:viewmodels="clr-namespace:museum.viewmodels"   
+             xmlns:local="clr-namespace:museum.pages"
+             xmlns:views="clr-namespace:museum.views"    
+             mc:Ignorable="d" FontFamily="Calibri" FontSize="12" Foreground="#374989"
+             d:DesignHeight="600" d:DesignWidth="300"
+             Width="1200" MinWidth="300">
+    <UserControl.Resources>
+        <museum:BookofHonour x:Key="BookofHonour"/>
+    </UserControl.Resources>
+    <ScrollViewer CanContentScroll="True"
+				  ScrollViewer.VerticalScrollBarVisibility="Hidden">
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="0"/>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="0"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Rectangle Grid.Row="0" Grid.Column="0"/>
+            <Rectangle Grid.Row="1" Grid.Column="1" Fill="White"/>
+            <Border Grid.Row="1" Grid.Column="1" Padding="20,5,20,5">
+            </Border>
+            <Border Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="3" Padding="20,0,20,60">
+                <StackPanel>
+                    <TextBlock FontSize="21" Foreground="#4d6b5e">                   
+                        Listing
+                    </TextBlock>
+
+                    <Grid DataContext="{Binding Source={StaticResource BookofHonour}}" >
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="0"/>
+                            <RowDefinition Height="26"/>
+                            <RowDefinition Height="26"/>
+                            <RowDefinition Height="26"/>
+                            <RowDefinition Height="26"/>
+                            <RowDefinition Height="26"/>
+                            <RowDefinition Height="26"/>
+                            <RowDefinition Height="26"/>
+                            <RowDefinition Height="26"/>
+                            <RowDefinition Height="26"/>
+                            <RowDefinition Height="26"/>
+                            <RowDefinition Height="26"/>
+                            <RowDefinition Height="26"/>
+                            <RowDefinition Height="26"/>
+                            <RowDefinition Height="26"/>
+                            <RowDefinition Height="26"/>
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="0"/>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+
+                        </Grid.ColumnDefinitions>
+                        <!--LABELS-->
+                        <Label x:Name="lblRef" Content="Ref No" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Right" VerticalAlignment="Center"/>
+                        <Label x:Name="lblSurname" Content="Surname" Grid.Row="2" Grid.Column="1" HorizontalAlignment="Right" VerticalAlignment="Center"/>
+                        <Label x:Name="lblName" Content="Name" Grid.Row="3" Grid.Column="1" HorizontalAlignment="Right" VerticalAlignment="Center"/>
+                        <Label x:Name="lblRank" Content="Rank" Grid.Row="4" Grid.Column="1" HorizontalAlignment="Right" VerticalAlignment="Center"/>
+                        <Label x:Name="lblServiceRegimentNo" Content="Service Regiment No" Grid.Row="5" Grid.Column="1" HorizontalAlignment="Right" VerticalAlignment="Center"/>
+                        <Label x:Name="lblRegimentUnitService" Content="Regiment Service Unit" Grid.Row="6" Grid.Column="1" HorizontalAlignment="Right" VerticalAlignment="Center"/>
+                        <Label x:Name="lblAttestationDatePlace" Content="Attestation Date Place" Grid.Row="7" Grid.Column="1" HorizontalAlignment="Right" VerticalAlignment="Center"/>
+                        <Label x:Name="lblResidenceWhenEnlisted" Content="Residence When Enlisted" Grid.Row="8" Grid.Column="1" HorizontalAlignment="Right" VerticalAlignment="Center"/>
+                        <Label x:Name="lblDateofBirth" Content="Date of Birth" Grid.Row="9" Grid.Column="1" HorizontalAlignment="Right" VerticalAlignment="Center"/>
+                        <Label x:Name="lblPlaceofBirth" Content="Place of Birth" Grid.Row="10" Grid.Column="1" HorizontalAlignment="Right" VerticalAlignment="Center"/>
+                        <Label x:Name="lblFathersName" Content="Fathers Name" Grid.Row="11" Grid.Column="1" HorizontalAlignment="Right" VerticalAlignment="Center"/>
+                        <Label x:Name="lblMothersName" Content="Mothers Name" Grid.Row="12" Grid.Column="1" HorizontalAlignment="Right" VerticalAlignment="Center"/>
+                        <Label x:Name="lblParentalNextofKinAddress" Content="Parental Next of Kin Address" Grid.Row="13" Grid.Column="1" HorizontalAlignment="Right" VerticalAlignment="Center"/>
+                        <Label x:Name="lblNextofKin" Content="Next of Kin" Grid.Row="14" Grid.Column="1" HorizontalAlignment="Right" VerticalAlignment="Center"/>
+
+                        <Label x:Name="lblReligion" Content="Religion" Grid.Row="1" Grid.Column="4" HorizontalAlignment="Right" VerticalAlignment="Center"/>
+                        <Label x:Name="lblMaritalStatus" Content="Marital_Status" Grid.Row="2" Grid.Column="4" HorizontalAlignment="Right" VerticalAlignment="Center"/>
+                        <Label x:Name="lblSpouseName" Content="Spouse Name" Grid.Row="3" Grid.Column="4" HorizontalAlignment="Right" VerticalAlignment="Center"/>
+                        <Label x:Name="lblSpouseAddress" Content="Spouse Address" Grid.Row="4" Grid.Column="4" HorizontalAlignment="Right" VerticalAlignment="Center"/>
+                        <Label x:Name="lblCauseofDeath" Content="Cause of Death" Grid.Row="5" Grid.Column="4" HorizontalAlignment="Right" VerticalAlignment="Center"/>
+                        <Label x:Name="lblPlaceofDeath" Content="Place of Death" Grid.Row="6" Grid.Column="4" HorizontalAlignment="Right" VerticalAlignment="Center"/>
+                        <Label x:Name="lblDateofDeath" Content="Date of Death" Grid.Row="7" Grid.Column="4" HorizontalAlignment="Right" VerticalAlignment="Center"/>
+                        <Label x:Name="lblPlaceofBurial" Content="Place of Burial" Grid.Row="8" Grid.Column="4" HorizontalAlignment="Right" VerticalAlignment="Center"/>
+                        <Label x:Name="lblAgeatDeath" Content="Age at Death" Grid.Row="9" Grid.Column="4" HorizontalAlignment="Right" VerticalAlignment="Center"/>
+                        <Label x:Name="lblMemorials" Content="Memorials" Grid.Row="10" Grid.Column="4" HorizontalAlignment="Right" VerticalAlignment="Center"/>
+                        <Label x:Name="lblWill" Content="Will" Grid.Row="11" Grid.Column="4" HorizontalAlignment="Right" VerticalAlignment="Center"/>
+                        <Label x:Name="lblAwardHonoursMedals" Content="Award Honours Medals" Grid.Row="12" Grid.Column="4" HorizontalAlignment="Right" VerticalAlignment="Center"/>
+                        <Label x:Name="lblImages" Content="Images" Grid.Row="13" Grid.Column="4" HorizontalAlignment="Right" VerticalAlignment="Center"/>
+                        <Label x:Name="lblAnyAdditionalInfo" Content="Any Additional Info" Grid.Row="14" Grid.Column="4" HorizontalAlignment="Right" VerticalAlignment="Center"/>
+
+
+
+                        <!--TEXT BOXES-->
+                        <TextBox x:Name="tbxRef"  Grid.Row="1" Grid.Column="2" Grid.ColumnSpan="2" Text="{Binding SelectedItem.Ref_No, Mode=TwoWay, ElementName=myDataGrid}" Height="23" Width="350" Padding="2,4,2,2" IsReadOnly="True"/>
+                        <TextBox x:Name="tbxSurname" Grid.Row="2" Grid.Column="2" Grid.ColumnSpan="2" Text="{Binding SelectedItem.Surname, ElementName=myDataGrid}" Height="23" Width="350" Padding="2,4,2,2" IsReadOnly="True"/>
+                        <TextBox x:Name="tbxName"  Grid.Row="3" Grid.Column="2" Grid.ColumnSpan="2" Text="{Binding SelectedItem.First_Name, Mode=TwoWay, ElementName=myDataGrid}" Height="23" Width="350" Padding="2,4,2,2" IsReadOnly="True"/>
+                        <TextBox x:Name="tbxRank"  Grid.Row="4" Grid.Column="2" Grid.ColumnSpan="2" Text="{Binding SelectedItem.Rank, Mode=TwoWay, ElementName=myDataGrid}" Height="23" Width="350" Padding="2,4,2,2" IsReadOnly="True"/>
+                        <TextBox x:Name="tbxServiceRegimentNo" Grid.Row="5" Grid.Column="2" Grid.ColumnSpan="2" Text="{Binding SelectedItem.Service___Regiment_No_, Mode=TwoWay, ElementName=myDataGrid}" Height="23" Width="350" Padding="2,4,2,2" IsReadOnly="True"/>
+                        <TextBox x:Name="tbxRegimentUnitService" Grid.Row="6" Grid.Column="2" Grid.ColumnSpan="2" Text="{Binding SelectedItem.Regiment___Unit___Service, Mode=TwoWay, ElementName=myDataGrid}" Height="23" Width="350" Padding="2,4,2,2" IsReadOnly="True"/>
+                        <TextBox x:Name="tbxAttestationDatePlace" Grid.Row="7" Grid.Column="2" Grid.ColumnSpan="2" Text="{Binding SelectedItem.Attestation_Date___Place, Mode=TwoWay, ElementName=myDataGrid}" Height="23" Width="350" Padding="2,4,2,2" IsReadOnly="True"/>
+                        <TextBox x:Name="tbxResidenceWhenEnlisted" Grid.Row="8" Grid.Column="2" Grid.ColumnSpan="2" Text="{Binding SelectedItem.Residence_When_Enlisted, Mode=TwoWay, ElementName=myDataGrid}" Height="23" Width="350" Padding="2,4,2,2" IsReadOnly="True"/>
+                        <TextBox x:Name="tbxDateofBirth" Grid.Row="9" Grid.Column="2" Grid.ColumnSpan="2" Text="{Binding SelectedItem.Date_of_Birth, Mode=TwoWay, ElementName=myDataGrid}" Height="23" Width="350" Padding="2,4,2,2" IsReadOnly="True"/>
+                        <TextBox x:Name="tbxPlaceofBirth" Grid.Row="10" Grid.Column="2" Grid.ColumnSpan="2" Text="{Binding SelectedItem.Place_of_Birth, Mode=TwoWay, ElementName=myDataGrid}" Height="23" Width="350" Padding="2,4,2,2" IsReadOnly="True"/>
+                        <TextBox x:Name="tbxFathersName" Grid.Row="11" Grid.Column="2" Grid.ColumnSpan="2" Text="{Binding SelectedItem.Fathers_Name, Mode=TwoWay, ElementName=myDataGrid}" Height="23" Width="350" Padding="2,4,2,2" IsReadOnly="True"/>
+                        <TextBox x:Name="tbxMothersName" Grid.Row="12" Grid.Column="2" Grid.ColumnSpan="2" Text="{Binding SelectedItem.Mothers_Name, Mode=TwoWay, ElementName=myDataGrid}" Height="23" Width="350" Padding="2,4,2,2" IsReadOnly="True"/>
+                        <TextBox x:Name="tbxParentalNextofKinAddresss" Grid.Row="13" Grid.Column="2" Grid.ColumnSpan="2" Text="{Binding SelectedItem.Parental___Next_of_Kin_Address, Mode=TwoWay, ElementName=myDataGrid}" Height="23" Width="350" Padding="2,4,2,2" IsReadOnly="True"/>
+                        <TextBox x:Name="tbxNextofKin" Grid.Row="14" Grid.Column="2" Grid.ColumnSpan="2" Text="{Binding SelectedItem.Next_of_Kin, Mode=TwoWay, ElementName=myDataGrid}" Height="23" Width="350" Padding="2,4,2,2" IsReadOnly="True"/>
+
+                        <TextBox x:Name="tbxReligion" Grid.Row="1" Grid.Column="5" Grid.ColumnSpan="2" Text="{Binding SelectedItem.Religion, Mode=TwoWay, ElementName=myDataGrid}" Height="23" Width="350" Padding="2,4,2,2" IsReadOnly="True"/>
+                        <TextBox x:Name="tbxMaritalStatus" Grid.Row="2" Grid.Column="5" Grid.ColumnSpan="2"  Text="{Binding SelectedItem.Marital_Status, Mode=TwoWay, ElementName=myDataGrid}" Height="23" Width="350" Padding="2,4,2,2" IsReadOnly="True"/>
+                        <TextBox x:Name="tbxSpouseName" Grid.Row="3" Grid.Column="5" Grid.ColumnSpan="2" Text="{Binding SelectedItem.Spouse_Name, Mode=TwoWay, ElementName=myDataGrid}" Height="23" Width="350" Padding="2,4,2,2" IsReadOnly="True"/>
+                        <TextBox x:Name="tbxSpouseAddress" Grid.Row="4" Grid.Column="5" Grid.ColumnSpan="2" Text="{Binding SelectedItem.Spouse_Address, Mode=TwoWay, ElementName=myDataGrid}" Height="23" Width="350" Padding="2,4,2,2" IsReadOnly="True"/>
+                        <TextBox x:Name="tbxCauseofDeath" Grid.Row="5" Grid.Column="5" Grid.ColumnSpan="2" Text="{Binding SelectedItem.Cause_of_Death, Mode=TwoWay, ElementName=myDataGrid}" Height="23" Width="350" Padding="2,4,2,2" IsReadOnly="True"/>
+                        <TextBox x:Name="tbxPlaceofDeath" Grid.Row="6" Grid.Column="5" Grid.ColumnSpan="2" Text="{Binding SelectedItem.Place_of_Death, Mode=TwoWay, ElementName=myDataGrid}" Height="23" Width="350" Padding="2,4,2,2" IsReadOnly="True"/>
+                        <TextBox x:Name="tbxDateofDeath" Grid.Row="7" Grid.Column="5" Grid.ColumnSpan="2" Text="{Binding SelectedItem.Date_of_Death, Mode=TwoWay, ElementName=myDataGrid}" Height="23" Width="350" Padding="2,4,2,2" IsReadOnly="True"/>
+                        <TextBox x:Name="tbxPlaceofBurial" Grid.Row="8" Grid.Column="5" Grid.ColumnSpan="2" Text="{Binding SelectedItem.Place_of_Burial, Mode=TwoWay, ElementName=myDataGrid}" Height="23" Width="350" Padding="2,4,2,2" IsReadOnly="True"/>
+                        <TextBox x:Name="tbxAgeatDeath" Grid.Row="9" Grid.Column="5" Grid.ColumnSpan="2" Text="{Binding SelectedItem.Age_at_Death, Mode=TwoWay, ElementName=myDataGrid}" Height="23" Width="350" Padding="2,4,2,2" IsReadOnly="True"/>
+                        <TextBox x:Name="tbxMemorials" Grid.Row="10" Grid.Column="5" Grid.ColumnSpan="2"  Text="{Binding SelectedItem.Memorial, Mode=TwoWay, ElementName=myDataGrid}" Height="23" Width="350" Padding="2,4,2,2" IsReadOnly="True"/>
+                        <TextBox x:Name="tbxWill" Grid.Row="11" Grid.Column="5" Grid.ColumnSpan="2" Text="{Binding SelectedItem.Will, Mode=TwoWay, ElementName=myDataGrid}" Height="23" Width="350" Padding="2,4,2,2" IsReadOnly="True"/>
+                        <TextBox x:Name="tbxAwardHonoursMedals" Grid.Row="12" Grid.Column="5" Grid.ColumnSpan="2" Text="{Binding SelectedItem.Award___Honours___Medals, Mode=TwoWay, ElementName=myDataGrid}" Height="23" Width="350" Padding="2,4,2,2" IsReadOnly="True"/>
+                        <TextBox x:Name="tbxImages" Grid.Row="13" Grid.Column="5" Grid.ColumnSpan="2" Text="{Binding SelectedItem.Image_s_, Mode=TwoWay, ElementName=myDataGrid}" Height="23" Width="350" Padding="2,4,2,2" IsReadOnly="True"/>
+                        <TextBox x:Name="tbxAnyAdditionalInfo" Grid.Row="14" Grid.Column="5" Grid.ColumnSpan="2" Text="{Binding SelectedItem.Any_additional_info, Mode=TwoWay, ElementName=myDataGrid}" Height="23" Width="350" Padding="2,4,2,2" IsReadOnly="True"/>
+                    </Grid>
+
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="0"/>
+                            <RowDefinition Height="50"/>
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="0"/>
+                            <ColumnDefinition Width="90"/>
+                            <ColumnDefinition Width="90"/>
+                            <ColumnDefinition Width="90"/>
+                            <ColumnDefinition Width="90"/>
+                            <ColumnDefinition Width="90"/>
+                            <ColumnDefinition Width="90"/>
+                            <ColumnDefinition Width="90"/>
+                            <ColumnDefinition Width="90"/>
+                            <ColumnDefinition Width="90"/>
+                            <ColumnDefinition Width="90"/>
+                            <ColumnDefinition Width="90"/>
+                            <ColumnDefinition Width="90"/>
+                            <ColumnDefinition Width="90"/>
+                        </Grid.ColumnDefinitions>
+                    </Grid>
+
+                    <ScrollViewer ScrollViewer.VerticalScrollBarVisibility="Auto">
+                        <Grid >
+                            <DataGrid x:Name="myDataGrid" x:FieldModifier="public" ColumnWidth="*" 
+                                      AutoGenerateColumns="False" SelectionUnit="FullRow" 
+                                      AlternatingRowBackground="FloralWhite"  IsReadOnly="True" >
+                                <DataGrid.Columns>
+                                    <DataGridTextColumn Binding="{Binding Ref_No}" Header="Ref" Width="40"/>
+                                    <DataGridTextColumn Binding="{Binding Surname}" Header="Surname" Width="100"/>
+                                    <DataGridTextColumn Binding="{Binding First_Name}" Header="First Name" Width="100"/>
+                                    <DataGridTextColumn Binding="{Binding Rank}" Header="Rank" Width="140"/>
+                                    <DataGridTextColumn Binding="{Binding Service___Regiment_No_}" Header="Service No" Width="70"/>
+                                    <DataGridTextColumn Binding="{Binding Regiment___Unit___Service}" Header="Regiment" Width="250"/>
+                                    <DataGridTextColumn Binding="{Binding Residence_When_Enlisted}" Header="Residence" Width="70"/>
+                                    <DataGridTextColumn Binding="{Binding Parental___Next_of_Kin_Address}" Header="Parents Residence" Width="250"/>
+                                    <DataGridTextColumn Binding="{Binding Spouse_Name}" Header="Spouse" Width="100"/>
+                                </DataGrid.Columns>
+                            </DataGrid>
+                        </Grid>
+                    </ScrollViewer>
+                </StackPanel>
+            </Border>
+        </Grid>
+    </ScrollViewer>
+</UserControl>
