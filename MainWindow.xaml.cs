@@ -80,8 +80,6 @@ namespace museum
         {
             windows.register _register = new windows.register();
             _register.ShowDialog();
-        }
-
-        
+        }        
     }
 }
